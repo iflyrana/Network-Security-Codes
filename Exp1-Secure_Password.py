@@ -10,6 +10,7 @@ while tries > 0:
     enteredPassword_hashed = hs.sha256(enteredPassword.encode()).hexdigest()
     if enteredPassword_hashed == storedPassword_hashed:
         print("Correct! You entered the correct password.")
+        break
     else:
         print(f"Incorrect! You entered the wrong password. Remaining tries: {tries - 1}")
         tries -= 1
