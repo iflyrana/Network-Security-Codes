@@ -13,8 +13,8 @@ def decrypt(text, key):
 
     num_cols = len(key)
     num_rows = len(text) // num_cols
-    matrix = [list(text[i:i + num_rows]) for i in range(0, len(text), num_rows)]
-    sorted_columns = [col for _, col in sorted(zip(key, zip(*matrix)))]
+    matrix = [list(text[i * num_rows:(i + 1) * num_rows]) for i in range(num_cols)]
+    sorted_columns = [col for _, col in sorted(zip(key, matrix))]
     decrypted_text = ''.join(''.join(col) for col in zip(*sorted_columns))
 
     return decrypted_text
@@ -22,7 +22,7 @@ def decrypt(text, key):
 
 if __name__ == '__main__':
     plain_text = input("Enter plain text (all uppercase): ")
-    key = input("Enter the key (numbers from 1 to n): ")
+    key = input("Enter the key (unique numbers from 1 to n to define sequence): ")
 
     encrypted = encrypt(plain_text, key)
     print("Encrypted text:", encrypted)
