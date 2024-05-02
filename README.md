@@ -1,15 +1,12 @@
 # Network Security Codes
 
-This repository contains experimental code implementations for network security concepts. The experiments are implemented in both Python and C++.
+This repository contains experimental code implementations for network security concepts. The experiments are implemented in Python. I have removed the C++ codes as I didnt have
+time to test those, you may feel free to translate these python codes to C++ or Java with a suitable tool like ChatGPT
 
-## Contents
-
-- [Python](./python): Contains Python implementations of network security experiments.
-- [C++](./cpp): Contains C++ translations of the Python implementations, assisted by ChatGPT.
 
 ## Introduction
 
-This repository serves as a resource for understanding network security concepts through practical implementations. The code is organized into two folders: Python and C++. The Python folder contains original implementations written by me, while the C++ folder contains translations of the Python code, aided by ChatGPT.
+This repository serves as a resource for understanding network security concepts through practical implementations.
 
 ## Experiment Codes
 
